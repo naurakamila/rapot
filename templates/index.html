@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Nilai Siswa</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('data') }}"class="active">Home</a>
+        <a href="{{ url_for('form') }}">Form</a>
+        {% if user %}
+            <P style="float: right;">Logged in as: {{ user.username }} ({{ user.role }})</li>
+    
+        {% endif %}
+        
+    </div>
+    <div class="tabel">
+        <h1>Data Nilai Siswa</h1>
+        <table border="0">
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th>Nilai UH</th>
+                    <th>Nilai UTS</th>
+                    <th>Nilai UAS</th>
+                    <th>Nilai Akhir</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in rows %}
+                <tr>
+                    <td>{{ row.nama }}</td>
+                    <td>{{ row.nilai_uh }}</td>
+                    <td>{{ row.nilai_uts }}</td>
+                    <td>{{ row.nilai_uas }}</td>
+                    <td>{{ row.nilai_akhir }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <form action="/export_pdf" method="GET">
+            <input type="submit" value="Export to PDF">
+        </form>
+    </div>
+</body>
+</html>

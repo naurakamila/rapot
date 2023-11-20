@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Input Form</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/form.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('data') }}" id="center-text">Home</a>
+        <a href="{{ url_for('form') }}" class="active" id="center-text">Form</a>
+        
+    </div>
+    <div class="container">
+       
+        <h1>Form Nilai</h1>
+        <form action="/submit" method="POST">
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama"><br><br>
+            
+            <label for="nilai_uh">Nilai UH:</label>
+            <input type="text" id="nilai_uh" name="nilai_uh"><br><br>
+            
+            <label for="nilai_uts">Nilai UTS:</label>
+            <input type="text" id="nilai_uts" name="nilai_uts"><br><br>
+            
+            <label for="nilai_uas">Nilai UAS:</label>
+            <input type="text" id="nilai_uas" name="nilai_uas"><br><br>
+            
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

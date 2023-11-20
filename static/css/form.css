@@ -1,0 +1,96 @@
+/* Style untuk form.html */
+.navbar {
+    margin: -8px;
+    overflow: hidden;
+    background-color: #4884c8;
+    margin-bottom: 40px;
+}
+
+h1{
+  text-align: center;
+}
+
+#center-text a {
+  display: block;
+  text-decoration: none;
+  color: #000; /* Warna teks */
+  padding: 10px 15px; /* Padding untuk tata letak */
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 18px 30px;
+    text-decoration: none;
+    font-size: 17px;
+
+}
+
+.active{
+    background-color: #38669a;
+}
+
+.navbar a:hover {
+    background-color: #39699f;
+    color: black;
+}
+
+.content {
+    padding: 10px;
+}
+
+label {
+  font-size: larger;
+}
+body {
+    
+    font-family: Arial, sans-serif;
+
+    padding: 0;
+    background-color: white;
+  }
+
+  
+  .container {
+    width: 69%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+    margin-top: -30px;
+    border-radius: 5px;
+    
+  }
+  
+  form {
+    margin: 20px 0;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="submit"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  input[type="submit"] {
+    background: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 18px;
+    padding: 11px;
+  }
+  
+  input[type="submit"]:hover {
+    background: #3e8d40;
+  }
+  
